@@ -1,0 +1,327 @@
+:root{
+    --background-color:#4682A9;
+    --color:#F6F4EB;
+    --font-size-heading:25px;
+    --font-size-p:15px;
+    --font-size-nav-p:16px;
+    --font-size-label:16px;
+    --font-size-input:14px;
+    --font-size-button:16px;
+    --font-size-placeholder:13px;
+    --background-color-card:#F6F4EB;
+    --font-size-book-heading:20px;
+    --form-background-color:#4682A9;
+    --font-color-card:#4682A9;
+    --background-color-input:#749BC2;
+}
+body{
+    width:100%;
+    height:auto;
+    margin:0;
+}
+.main-div{
+    width:100%;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position:relative;
+    background-color:var(--background-color);
+}
+form,
+.issueBook{
+    width:70%;
+    height:600px;
+    color:var(--color);
+    box-shadow: 1px 1px 4px black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    position:absolute;
+    top:50px;
+    background-color:var(--form-background-color);
+}
+.issueBook{
+    position:static;
+    box-shadow:none;
+}
+.para-div,
+.name-div,
+.mobile-div,
+.email-div,
+.password-div,
+.date-div,
+.submit-div{
+    width:40%;
+    height:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.name-div,
+.mobile-div,
+.email-div,
+.password-div,
+.date-div{
+    width:25%;
+    align-items:flex-start;
+}
+label{
+    font-size:var(--font-size-label);
+}
+input,
+select{
+    width:100%;
+    height:32px;
+    box-sizing:border-box;
+    outline:none;
+    border-radius:4px;
+    border:none;
+    font-size:var(--font-size-input);
+    color:var(--color);
+    font-weight:bold;
+    padding-left:10px;
+    background-color:var(--background-color-input);
+}
+select{
+    font-size:13px;
+}
+::placeholder{
+    font-size:var(--font-size-placeholder);
+    color:var(--color);
+    font-weight:bold;
+}
+input[type^="submit"]{
+    width:25%;
+    height:32px;
+    background-color:var(--background-color-input);
+    color:var(--color);
+    font-weight:bold;
+    font-size:var(--font-size-button);
+    cursor:pointer;
+}
+h3{
+    margin:0;
+    font-size:var(--font-size-heading);
+}
+p{
+    margin:5px 0px 0px 0px;
+    font-size:var(--font-size-p);
+}
+.submit-div{
+    margin-top:10px;
+}
+a{
+    color:var(--color);
+}
+.error-div{
+    width:30%;
+    height:50px;
+    text-align:center;
+    line-height:50px;
+}
+.error-div .error{
+    font-size:var(--font-size-nav-p);
+    color:red;
+    font-weight:bold;
+}
+nav{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    background-color:var(--background-color);
+}
+.logo-div{
+    width:20%;
+    height:inherit;
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.logo-div img{
+    height:70px;
+    aspect-ratio:7/5;
+}
+.info-div{
+    width:60%;
+    height:inherit;
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.books-div,
+.delete-books,
+.issue-books,
+.sign-div,
+.student-books,
+.login-div,
+.logout-div{
+    width:25%;
+    height:78px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.books-div,
+.delete-books,
+.sign-div,
+.login-div,
+.logout-div{
+    width:15%;
+}
+.info-div a{
+    text-decoration:none;
+    color:var(--color);
+    font-size:16px;
+    font-weight:550;
+}
+.info-div i{
+    font-size:16px;
+    margin-right:5px;
+}
+.info-div a:hover{
+    text-decoration:underline;
+}
+.message-box{
+    display:none;
+    width:70%;
+    height:200px;
+    background-color:var(--background-color);
+    position:absolute;
+    top:690px;
+    flex-direction:column;
+    justify-content:space-evenly;
+    box-shadow: 1px 1px 4px black;
+}
+.message-box h1{
+    margin:0px 0px 0px 25px;
+    font-size:28px;
+    color:var(--color);
+}
+.message-box p{
+    margin:0px 0px 0px 25px ;
+    color:var(--color);
+    font-size:var(--font-size-nav-p);
+    font-weight:bold;
+}
+.icon-div{
+    display:none;
+}
+section{
+    width:100%;
+    height:auto;
+    background-color:var(--background-color);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:10px;
+}
+.card-row,
+.row-div{
+    width:90%;
+    height:auto;
+    display:flex;
+}
+.row-div{
+    justify-content:space-evenly;
+    align-items:center;
+}
+.card-div{
+    position:relative;
+    width:30%;
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    background-color:var(--background-color-card);
+    align-items:center;
+    justify-content:center;
+    margin:20px 12.5px 0px 12.5px;
+    border-radius:4px;
+    overflow:hidden;
+}
+.card-div img{
+    aspect-ratio:6/6;
+    height:300px;
+    border-radius:4px;
+    margin:5px 0px 0px 10px;
+}
+.card-div .info-div{
+    position:absolute;
+    top:490px;
+    width:100%;
+    height:190px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    z-index:10;
+    align-items:flex-start;
+    transition:ease-in-out 0.5s;
+    background-color:var(--background-color-card);
+}
+.card-div:hover .info-div{
+    top:120px;
+}
+.card-div .info-div h5{
+    margin:0px 0px 5px 10px;
+    font-size:var(--font-size-book-heading);
+    color:var(--font-color-card);
+}
+.card-div .info-div p{
+    margin:0px 0px 5px 10px;
+    font-size:var(--font-size-nav-p);
+    color:var(--font-color-card);
+}
+footer{
+    width:100%;
+    height:80px;
+    background-color:var(--background-color);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+footer span{
+    font-size:var(--font-size-p);
+    font-weight:bold;
+    color:var(--color);
+}
+.row-div .img-div{
+    width:10%;
+    height:auto;
+}
+.row-div .img-div img{
+    height:180px;
+    aspect-ratio:6/8;
+}
+.row-div .info-div{
+    width:75%;
+    height:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.row-div h5{
+    margin-top:25px;
+    color:var(--color);
+    font-size:17px;
+}
+.row-div .info-div .book-div,
+.row-div .info-div .id-div,
+.row-div .info-div .student-div,
+.row-div .info-div .mobile-div,
+.row-div .info-div .issue-div,
+.row-div .info-div .submit-div{
+    width:40%;
+    height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--color);
+}
+

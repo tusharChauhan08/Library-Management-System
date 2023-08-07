@@ -1,0 +1,38 @@
+<section class="showBook">
+    <div class="row-div">
+        <h5>Book-Image</h5>
+        <h5>Book-Name</h5>
+        <h5>Library-id</h5>
+        <h5>Student-Name</h5>
+        <h5>Mobile-no</h5>
+        <h5>Issue-Date</h5>
+        <h5>Submit-Date</h5>
+    </div>
+    {% for i in result %}
+    <div class="row-div">
+        <div class="img-div">
+            <img src="{{i.Url}}" alt="">
+        </div>
+        <div class="info-div">
+            <div class="book-div">
+                {{i.Book_Name}}
+            </div>
+            <div class="id-div">
+                {{i.Library_id}}
+            </div>
+            <div class="student-div">
+                {{i.Student_Name}}
+            </div>
+            <div class="mobile-div">
+                {{i.Mobile_no}}
+            </div>
+            <div class="issue-div">
+                {{i.Issue_Date}}
+            </div>
+            <div class="submit-div">
+                {{i.Submit_Date}}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>

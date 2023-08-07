@@ -1,0 +1,174 @@
+:root{
+    --background-color:#4682A9;
+    --color:#F6F4EB;
+    --font-size-heading:25px;
+    --font-size-p:14px;
+    --font-size-nav-p:16px;
+    --font-size-label:17px;
+    --font-size-input:14px;
+    --font-size-button:15px;
+    --font-size-placeholder:12px;
+    --font-size-span:17px;
+    --font-size-icon:28px;
+    --font-size-a:18px;
+    --background-color-card:#F6F4EB;
+    --form-background-color:#4682A9;
+}
+@media (min-width:280px) and (max-width:1279px){
+    .main-div{
+        width:100%;
+        height:auto;
+    }
+    form{
+        width:90%;
+        height:450px;
+        top:100px;
+    }
+    .issueBook{
+        position:none
+    }
+    .para-div,
+    .submit-div{
+        width:100%;
+        height:60px;
+    }
+    .name-div,
+    .email-div,
+    .password-div,
+    .date-div,
+    .mobile-div{
+        width:220px;
+        height:60px;
+    }
+    input,
+    select{
+        width:100%;
+        height:30px;
+    }
+    input[type^="submit"]{
+        width:90px;
+        font-size:var(--font-size-button);
+    }
+    p{
+        margin:0;
+        font-size:var(--font-size-p);
+    }
+    ::placeholder{
+        font-size:var(--font-size-placeholder);
+    }
+    .submit-div p{
+        margin-top:5px;
+        font-size:15px;
+    }
+    label{
+        font-size:var(--font-size-label);
+    }
+    .message-box{
+        top:580px;
+        width:90%;
+    }
+    .message-box h1{
+        font-size:18px;
+        color:white;
+        margin-top:5px;
+    }
+    .message-box p{
+        font-size:15px;
+        margin-top:2px;
+    }
+    .error-div{
+        width:90%;
+        height:50px;
+        margin-top:25px;
+    }
+    .error-div .error{
+        font-size:var(--font-size-span);
+    }
+    nav{
+        width:100%;
+    }
+    .logo-div{
+        width:150px;
+    }
+    .icon-div{
+        display:block;
+        width:28px;
+        height:80px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-right:25px;
+    }
+    .icon-div i{
+        font-size:var(--font-size-icon) !important;
+        color:var(--color);
+    }
+    .info-div{
+        width:0px;
+        height:500px;
+        position:fixed;
+        flex-direction:column;
+        overflow-x:hidden;
+        background-color:var(--background-color);
+        top:80px;
+        right:0px;
+        transition:ease-in-out 0.3s !important;
+        z-index:1000;
+    }
+    .books-div,
+    .delete-books,
+    .issue-books,
+    .sign-div,
+    .login-div,
+    .logout-div{
+        width:80%;
+        height:80px;
+        justify-content:flex-start;
+    }
+    a{
+        font-size:var(--font-size-a) !important;
+    }
+    i{
+        font-size:var(--font-size-a) !important;
+        color:white;
+    }
+    section{
+        width:100%;
+        height:auto;
+        flex-direction:column;
+    }
+    .card-row{
+        width:90%;
+        height:400px;
+    }
+    .card-div{
+        width:400px;
+        height:340px;
+        background-color:var(--background-color-card);
+        position:relative;
+    }
+    .card-div .img-div img{
+        aspect-ratio:5/5;
+        height:180px;
+    }
+    .card-div .info-div{
+        width:100%;
+        height:150px;
+        background-color:var(--background-color-card);
+        box-sizing:border-box;
+        position:absolute;
+        top:460px;
+        transition:ease-in-out 0.5s;
+    }
+    .card-div:hover .info-div{
+        top:160px;
+    }
+    .card-div .info-div h5{
+        font-size:18px;
+    }
+    .card-div .info-div p{
+        font-size:15px;
+    }
+
+}
+

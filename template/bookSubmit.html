@@ -1,0 +1,61 @@
+{% if signupError %}
+        <div class="error-div">
+            <span class="error">Please fill up all the details!</span>
+        </div>
+{% endif %}
+{% if idError %}
+        <div class="error-div">
+            <span class="error">Book is not issued to this student or already submited.</span>
+        </div>
+{% endif %}
+<form action="/submitBook/book" method="post" class="issueBook">
+    {% csrf_token %}
+        <div class="para-div">
+            <h3>Welcome</h3>
+            <p>For Submit the Issue book into library enter the details.</p>
+        </div>
+        <div class="name-div">
+            <label for="">Student-Name:</label>
+            <input type="text" placeholder="Enter student name." name="studentName">
+        </div>
+        <div class="mobile-div">
+            <label for="">Mobile-no:</label>
+            <input type="text" placeholder="Enter student mobile number." name="mobile">
+        </div>
+        <div class="email-div">
+            <label for="">Library-id:</label>
+            <input type="text" placeholder="Enter student Library id." name="libraryId">
+        </div>
+        <div class="password-div">
+            <label for="">Book-name:</label>
+            <select name="bookName" id="">
+                <option value="">Select Book Name</option>
+                {% for i in books1.items %}
+                    <option value="{{i.volumeInfo.title}}">{{i.volumeInfo.title}}</option>
+                {% endfor %}
+                {% for i in books2.items %}
+                    <option value="{{i.volumeInfo.title}}">{{i.volumeInfo.title}}</option>
+                {% endfor %}
+                {% for i in books3.items %}
+                    <option value="{{i.volumeInfo.title}}">{{i.volumeInfo.title}}</option>
+                {% endfor %}
+                {% for i in books4.items %}
+                    <option value="{{i.volumeInfo.title}}">{{i.volumeInfo.title}}</option>
+                {% endfor %}
+                {% for i in books5.items %}
+                    <option value="{{i.volumeInfo.title}}">{{i.volumeInfo.title}}</option>
+                {% endfor %}
+                {% for i in books6.items %}
+                    <option value="{{i.volumeInfo.title}}">{{i.volumeInfo.title}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="date-div">
+            <label for="">Submit-date:</label>
+            <input type="date" name="date">
+        </div>
+        <div class="submit-div">
+            <input type="submit" value="Submit">
+            <p>For Home <a href="/returnHome">Click Here</a></p>
+        </div>
+</form>

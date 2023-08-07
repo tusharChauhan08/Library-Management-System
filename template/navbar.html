@@ -1,0 +1,44 @@
+<nav>
+  {% load static %}
+  <div class="logo-div">
+    <img src="{% static 'img/PngItem_254317.png' %}" alt="">
+  </div>
+  <div class="icon-div" >
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <div class="info-div">
+    {% if navIssueBook %}
+      <div class="books-div">
+        <a href="/issueBook"><i class="fa-solid fa-book"></i>Issue Book</a>
+      </div>
+    {% endif %}
+     {% if backHome %}
+      <div class="books-div">
+        <a href="/returnHome"><i class="fa-solid fa-house"></i>Home</a>
+      </div>
+    {% endif %}
+    {% if submitBookOpt %}
+      <div class="delete-books">
+        <a href="/submitBook"><i class="fa-sharp fa-solid fa-trash"></i>Submit Book</a>
+      </div>
+    {% endif %}
+    {% if showBookOpt %}
+      <div class="issue-books">
+        <a href="/issueShowBook"><i class="fa-solid fa-book-open"></i>Show Issues Books</a>
+      </div>
+    {% endif %}
+    {% if signOpt %}
+      <div class="sign-div">
+        <a href="/signed"><i class="fa-solid fa-right-to-bracket"></i>SingUp</a>
+      </div>
+      <div class="login-div">
+        <a href="/login"><i class="fa-solid fa-user"></i>Login</a>
+      </div>
+    {% endif %}
+    {%if logoutOpt %}
+      <div class="logout-div">
+        <a href="/logout"><i class="fa-solid fa-user"></i>Logout</a>
+      </div>
+    {% endif %}
+  </div>
+</nav>
